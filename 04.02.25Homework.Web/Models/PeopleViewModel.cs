@@ -2,7 +2,8 @@
 using _04._02._25Homework.Data;
 
 public class PeopleViewModel
-    {
-        public List<Person> People { get; set; }
-    }
+{
+    public List<Person> People { get; set; }
+    public string Message { get; set; }
+}
 

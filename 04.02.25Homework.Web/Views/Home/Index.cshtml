@@ -1,6 +1,14 @@
 ﻿@using _04._02._25Homework.Data
 @model PeopleViewModel
 
+@if (!String.IsNullOrEmpty(Model.Message))
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @Model.Message
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
 <div b-ud2x8zyu5z="" class="container">
     <main b-ud2x8zyu5z="" role="main" class="pb-3">
         <div class="row">

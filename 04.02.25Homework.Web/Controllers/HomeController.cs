@@ -16,6 +16,12 @@ namespace _04._02._25Homework.Web.Controllers
             {
                 People = db.GetPeople()
             };
+
+            if (TempData["message"] != null)
+            {
+                vm.Message = (string)TempData["message"];
+            }
+
             return View(vm);
         }
 
@@ -37,6 +43,13 @@ namespace _04._02._25Homework.Web.Controllers
         {
             PeopleDb db = new(_connectionString);
             db.DeleteMany(ids);
+
+            string text = "person";
+            if(ids.Count > 1)
+            {
+                text = "people";
+            }
+            TempData["message"] = $"{ids.Count} {text} deleted successfully";
             return Redirect("/");
         }
     }
