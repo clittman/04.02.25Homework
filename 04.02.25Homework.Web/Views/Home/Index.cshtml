@@ -1,0 +1,38 @@
+﻿@using _04._02._25Homework.Data
+@model PeopleViewModel
+
+<div b-ud2x8zyu5z="" class="container">
+    <main b-ud2x8zyu5z="" role="main" class="pb-3">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="/home/addpeople" class="btn btn-success">Add People</a>
+                <form method="post" action="/home/deletemany">
+                    <table class="table table-hover table-bordered">
+                        <tbody>
+                            <tr>
+                                <th style="width:10%">
+                                    <button class="btn btn-danger">Delete All</button>
+                                </th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                            </tr>
+                            @foreach(Person p in Model.People)
+                            {
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="ids[]" value="@p.Id">
+                                    </td>
+                                    <td>@p.FirstName</td>
+                                    <td>@p.LastName</td>
+                                    <td>@p.Age</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+    </main>
+</div>
