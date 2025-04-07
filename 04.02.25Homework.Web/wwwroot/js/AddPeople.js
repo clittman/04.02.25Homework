@@ -1,7 +1,6 @@
 ﻿$(() => {
     $('#add-rows').on('click', AddRows);
 
-    console.log("hi");
 })
 
 let num = 1;
