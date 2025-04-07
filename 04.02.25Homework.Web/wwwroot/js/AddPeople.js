@@ -4,7 +4,7 @@
     console.log("hi");
 })
 
-var num = 1;
+let num = 1;
 
 function AddRows() {
     console.log("testing");
